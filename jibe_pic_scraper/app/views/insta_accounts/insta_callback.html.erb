@@ -1,0 +1,6 @@
+<%= @dctech.each do |item| %>
+  <%= image_tag(item.images["thumbnail"]["url"])%>
+<br>
+<%= item.comments["count"] %>
+<br>
+<%- end %>

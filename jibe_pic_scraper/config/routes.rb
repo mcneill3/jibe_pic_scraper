@@ -1,4 +1,28 @@
 Rails.application.routes.draw do
+  # get 'insta_accounts/index'
+  #
+  # get 'insta_accounts/new'
+  #
+  # get 'insta_accounts/show'
+  #
+  # get 'insta_accounts/edit'
+  #
+  # get 'insta_accounts/create'
+  #
+  # get 'insta_accounts/update'
+  #
+  # get 'insta_accounts/destroy'
+
+  # CALLBACK_URL = "http://jibe_pic_scraper/inta"
+
+
+  resources :insta_accounts do
+    collection do
+      get "insta_callback"
+      get "insta_connect"
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
