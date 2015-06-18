@@ -62,6 +62,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
+    flickraw (0.9.8)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     hashie (3.4.2)
@@ -168,6 +169,7 @@ DEPENDENCIES
   better_errors
   byebug
   coffee-rails (~> 4.1.0)
+  flickraw
   instagram
   jbuilder (~> 2.0)
   jquery-rails

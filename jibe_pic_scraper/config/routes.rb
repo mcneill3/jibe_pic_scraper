@@ -23,6 +23,13 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :flickr_accounts do
+    collection do
+      get "flickr_callback"
+      get "flickr_connect"
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,6 +1,7 @@
 class InstaAccountsController < ApplicationController
 
   CALLBACK_URL = "http://jibe_pic_scraper.dev/insta_accounts/insta_callback"
+  
   def index
     @insta_accounts = InstaAccount.all
   end

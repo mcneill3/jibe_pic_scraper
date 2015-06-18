@@ -27,6 +27,8 @@ gem 'pry-rails'
 
 gem 'instagram'
 
+gem 'flickraw'
+
 gem 'nokogiri'
 
 
