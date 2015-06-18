@@ -8,6 +8,7 @@
 
   <tbody>
     <% @insta_accounts.each do |account| %>
+    <%= link_to 'See #dctech pictures for Instagram', insta_connect_insta_accounts_path(account) %>
       <tr>
         <td><%= account.username %></td>
         <td><%= link_to 'Show', account %></td>
