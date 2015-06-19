@@ -1,6 +1,6 @@
 class FlickrAccountsController < ApplicationController
 
-  require 'flickraw'
+  require 'flickr'
 
   CALLBACK_URL = "http://jibe_pic_scraper.dev/flickr_accounts/flickr_callback"
 
@@ -72,16 +72,21 @@ class FlickrAccountsController < ApplicationController
 
 
   def flickr_connect
-      Flickraw.api_key = "cff675a60acc72ab77c7b3f52655b690"
-      Flickraw.shared_secret = "ba164b12cdb9ac3c"
+    flickr =  Flickr.new("cff675a60acc72ab77c7b3f52655b690")
 
-      token = flickr.get_request_token
-      auth_url = flickr.get_authorize_url(token['oauth_token'], :perms => 'delete')
+    @recentphotos = flickr.photos
 
-      raise auth_url
-
-      redirect_to Flickraw.authorize_url(:redirect_uri => CALLBACK_URL)
-  end
+    raise flickr.inspect
+  #     Flickraw.api_key = "cff675a60acc72ab77c7b3f52655b690"
+  #     Flickraw.shared_secret = "ba164b12cdb9ac3c"
+  #
+  #     token = flickr.get_request_token
+  #     auth_url = flickr.get_authorize_url(token['oauth_token'], :perms => 'delete')
+  #
+  #     raise auth_url
+  #
+  #     redirect_to Flickraw.authorize_url(:redirect_uri => CALLBACK_URL)
+   end
 
 
 

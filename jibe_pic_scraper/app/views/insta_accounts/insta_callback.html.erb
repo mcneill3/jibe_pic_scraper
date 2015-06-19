@@ -1,4 +1,5 @@
-<%= @dctech.each do |item| %>
+<% sorted_dc = @dctech.sort_by { |a| -a.comments["count"]} %>
+<%= sorted_dc.each do |item| %>
   <%= image_tag(item.images["thumbnail"]["url"])%>
 <br>
 <%= item.comments["count"] %>
